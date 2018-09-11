@@ -50,9 +50,9 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
 
 autoload -U compinit
 
-plugins=(
-	docker
-)
+#plugins=(
+#	docker
+#)
 
 for plugin ($plugins); do
     fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
@@ -67,6 +67,7 @@ source ~/dotfiles/zsh/plugins/vi-mode.plugin.zsh
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh/keybindings.sh
+plugins=(git docker python vi-mode history-substring-search zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
 # Fix for arrow-key searching
 # start typing + [Up-Arrow] - fuzzy find history forward
@@ -84,3 +85,15 @@ fi
 
 source ~/dotfiles/zsh/prompt.sh
 export PATH=$PATH:$HOME/dotfiles/utils
+export ANSIBLE_STDOUT_CALLBACK=debug
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+alias workoff='deactivate'
+alias workon='. ~/garudaenv/bin/activate'
+alias lr='ls -ltr'
+alias sshb='ssh -F $(~/garuda/provisioning/ssh-cfg.sh)'
+alias gbuild='source ~/.gce_build_bbm'
+alias gint='source ~/.gce_int_bbm'
+alias gdev='source ~/.gce_dev_bbm'
+alias gprod='source ~/.gce_production_bbm'
+alias gints='source ~/.gce_intsip_bbm'
+alias gsip='source ~/.gce_sip_bbm'
