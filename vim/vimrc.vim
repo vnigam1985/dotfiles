@@ -19,8 +19,12 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'git@github.com:martinda/Jenkinsfile-vim-syntax.git'
+Plugin 'git@github.com:scrooloose/nerdtree.git'
+Plugin 'git@github.com:ervandew/supertab.git'
+Plugin 'git://github.com/tpope/vim-surround.git'
 " git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
+" Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
